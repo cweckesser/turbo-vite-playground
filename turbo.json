@@ -1,0 +1,19 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "tasks": {
+    "clean": {
+      "dependsOn": ["^clean"],
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "dependsOn": ["^build", "^test"]
+    },
+    "start": {
+      "dependsOn": ["^start"],
+      "cache": false
+    }
+  }
+}
